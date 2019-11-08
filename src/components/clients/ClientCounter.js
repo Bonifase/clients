@@ -28,8 +28,8 @@ const ClientCounter = () => {
             <td>{attendingByDiet("vegan")}</td>
           </tr><tr>
             <th>Pescatarians</th>
-            <td>{invitedByDiet("Pescatarian")}</td>
-            <td>{attendingByDiet("Pescatarian")}</td>
+            <td>{invitedByDiet("Pascatarian")}</td>
+            <td>{attendingByDiet("Pascatarian")}</td>
           </tr>
           <tr>
             <th>Total</th>

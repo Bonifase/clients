@@ -11,7 +11,7 @@ const clients = () => {
             id: 2,
             name: "John doe",
             phone: "117-334-100",
-            dietary: "Pescatarian",
+            dietary: "Pascatarian",
             isconfirmed: false
         },
         {
@@ -25,7 +25,7 @@ const clients = () => {
             id: 5,
             name: "Jack Maa",
             phone: "117-334-100",
-            dietary: "Pescatarian",
+            dietary: "Pascatarian",
             isconfirmed: false
         },
         {

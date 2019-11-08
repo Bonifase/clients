@@ -1,22 +1,32 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import ClientContext from '../context/clientContext/ClientContex';
 
 const Client = ({client}) => {
-  const { name, phone, dietary, isconfirmed } = client;
+  const { id, name, phone, dietary, isconfirmed } = client;
+  const { removeClient, updateClient, editClient } = useContext(ClientContext);
+  const handleRemove = () => {
+    removeClient(id);
+  };
+
+  // toggle invite confirmation
+  const handleUpdate = (e) => {
+    updateClient({...client, isconfirmed:!isconfirmed})
+  };
   return (
     <div className="guest-card">
       <div className="card-head">
         <div>
           <label className={`${isconfirmed && 'confirm'}`}> Confirmed
         <i className={`fas fa-check-square ${isconfirmed && 'confirm'}`}>
-              <input type="checkbox" />
+              <input type="checkbox" onChange={handleUpdate} />
             </i>
           </label>
         </div>
         <div>
-          <button>
+          <button onClick={() => editClient(client)}>
             <i className="fas fa-user-edit"></i>
           </button>
-          <button>
+          <button onClick={handleRemove}>
             <i className="fas fa-trash-alt remove"></i>
           </button>
         </div>
